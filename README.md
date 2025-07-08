@@ -1,14 +1,14 @@
-# Desafio Técnico Zygon - Analista de Dados JR. 
+# Desafio Técnico Zygon Digital - Analista de Dados JR. 
 
 Este projeto coleta dados da playlist do YouTube fornecida, utilizando a YouTube Data API v3. Todo o processo de coleta, tratamento e exportação está em um único arquivo Python conforme solicitado.
 
 ## Funcionalidades
 
-- ✅ Coleta dados dos vídeos da playlist do YouTube
-- ✅ Extrai todas as informações obrigatórias: ID, título, descrição, data de publicação, likes, views, comentários e thumbnail
-- ✅ Trata os dados (remove duplicatas, ordena, valida)
-- ✅ Exporta os dados para arquivo CSV
-- ✅ Carrega os dados no BigQuery
+- Coleta dados dos vídeos da playlist do YouTube
+- Extrai todas as informações obrigatórias: ID, título, descrição, data de publicação, likes, views, comentários e thumbnail
+- Trata os dados (remove duplicatas, ordena, valida)
+- Exporta os dados para arquivo CSV
+- Carrega os dados no BigQuery
 
 ## Arquivos principais
 
@@ -60,9 +60,9 @@ copy .env.example .env
 
     - Sua chave da YouTube API (YOUTUBE_API_KEY)
 
-    -O caminho para sua credencial do BigQuery (GOOGLE_APPLICATION_CREDENTIALS)
+    - O caminho para sua credencial do BigQuery (GOOGLE_APPLICATION_CREDENTIALS)
 
-    -ENABLE_BIGQUERY=True 
+    - ENABLE_BIGQUERY=True 
 
 ## Execução
 
@@ -106,6 +106,9 @@ Este projeto não inclui chaves sensíveis. Para executar corretamente:
     - Crie uma credencial de serviço no GCP com o acesso ao BigQuery e salve como .json
 
 ## Exemplo de Saída
+
+![image](https://github.com/user-attachments/assets/561d197d-0edb-4339-a7f9-6910c4bb88f0)
+![image](https://github.com/user-attachments/assets/82246ea6-ec9d-406b-851d-ca4ce31c2c2a)
 
 
 
