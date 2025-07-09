@@ -25,7 +25,7 @@ MAX_RESULTS = 300
 CSV_FILENAME = "youtube_data.csv"
 
 # Configurações do BigQuery
-BIGQUERY_PROJECT_ID = "desafio-zygon"
+BIGQUERY_PROJECT_ID = "desafio-zygon-analytics"
 BIGQUERY_DATASET_ID = "yt_playlist_collector"
 BIGQUERY_TABLE_ID = "yt_data"
 ENABLE_BIGQUERY = os.getenv("ENABLE_BIGQUERY", "False") == "True"
