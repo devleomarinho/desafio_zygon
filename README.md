@@ -77,23 +77,22 @@ O script executará automaticamente:
 
 ## Dados Coletados
 
-O arquivo CSV gerado contém as seguintes colunas **obrigatórias**:
+O arquivo CSV gerado contém as seguintes colunas:
 
-| Coluna | Descrição |
-|--------|-----------|
-| `video_id` | ID único do vídeo |
-| `title` | Título do vídeo |
-| `description` | Descrição do vídeo |
-| `published_date` | Data de publicação (YYYY-MM-DD) |
-| `likes` | Número de likes |
-| `views` | Número de visualizações |
-| `comments` | Número de comentários |
-| `thumbnail_url` | URL da thumbnail |
+| Coluna           | Tipo            | Descrição                                      |
+|------------------|------------------|-----------------------------------------------|
+| `video_id`       | `string`         | ID único do vídeo                             |
+| `title`          | `string`         | Título do vídeo                               |
+| `description`    | `string`         | Descrição do vídeo (limitada a 500 caracteres)|
+| `published_date` | `date`           | Data de publicação (YYYY-MM-DD)               |
+| `likes`          | `int64`          | Número de likes                               |
+| `views`          | `int64`          | Número de visualizações                       |
+| `comments`       | `int64`          | Número de comentários                         |
+| `thumbnail_url`  | `string`         | URL da thumbnail em alta resolução            |
+| `video_url`      | `string`         | URL completa do vídeo no YouTube              |
+| `ranking_views`  | `int64`          | Posição no ranking por número de views        |
+| `data_coleta`    | `timestamp`      | Data e hora em que os dados foram coletados   |
 
-**Colunas extras adicionadas**:
-- `video_url`: URL completa do vídeo
-- `ranking_views`: Ranking baseado em visualizações
-- `data_coleta`: Data e hora da coleta
 
 ## Segurança
 
@@ -104,6 +103,9 @@ Este projeto não inclui chaves sensíveis. Para executar corretamente:
     - Obtenha sua chave de API do YouTube: https://console.developers.google.com/
 
     - Crie uma credencial de serviço no GCP com o acesso ao BigQuery e salve como .json
+
+    - Para que o upload funcione, a conta de serviço usada no script precisa ter permissão de **Editor** no dataset, neste caso o `yt_playlist_collector`.
+
 
 ## Exemplo de Saída
 

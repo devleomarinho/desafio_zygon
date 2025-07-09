@@ -35,7 +35,7 @@ ENABLE_BIGQUERY = os.getenv("ENABLE_BIGQUERY", "False") == "True"
 # =============================================================================
 
 class YouTubeDataCollector:
-    """Classe para coletar dados de playlists do YouTube"""
+    """Classe para coletar os dados da playlist """
     
     def __init__(self, api_key):
         """Inicializa o coletor com a chave da API"""
@@ -247,8 +247,27 @@ class YouTubeDataCollector:
         
         # Adicionar data de coleta
         df['data_coleta'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+        # Converter tipos de dados das colunas
+        print("Convertendo tipos de dados das colunas do dataframe...")
+        try:
+            df['video_id'] = df['video_id'].astype(str)
+            df['title'] = df['title'].astype(str)
+            df['description'] = df['description'].astype(str)
+            df['thumbnail_url'] = df['thumbnail_url'].astype(str)
+            df['video_url'] = df['video_url'].astype(str)
+
+            df['views'] = df['views'].astype('int64')
+            df['likes'] = df['likes'].astype('int64')
+            df['comments'] = df['comments'].astype('int64')
+            df['ranking_views'] = df['ranking_views'].astype('int64')
+
+            df['published_date'] = pd.to_datetime(df['published_date'], format='%Y-%m-%d')
+            df['data_coleta'] = pd.to_datetime(df['data_coleta'], format='%Y-%m-%d %H:%M:%S')
+        except Exception as e:
+            print(f"Erro na conversão de tipos: {e}")
         
-        print(f"Dados tratados: {len(df)} vídeos válidos")
+            print(f"Dados tratados: {len(df)} vídeos válidos")
         
         return df
     
