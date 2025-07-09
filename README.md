@@ -1,4 +1,4 @@
-# Desafio Técnico Zygon Digital - Analista de Dados 
+   # Desafio Técnico Zygon Digital - Analista de Dados 
 
 Este projeto coleta dados da playlist do YouTube fornecida, utilizando a YouTube Data API v3, exporta para um arquivo CSV e também faz a persistência em uma tabela no BigQuery. Todo o processo de coleta, tratamento e exportação está em um único arquivo Python conforme solicitado.
 
@@ -16,8 +16,10 @@ Este projeto coleta dados da playlist do YouTube fornecida, utilizando a YouTube
 |--------|-----------|
 | `yt_data.py` | Script principal contendo toda a lógica de coleta, tratamento e exportação |
 | `youtube_data.csv` | Arquivo gerado com os dados coletados |
+| `dashboard.pbix` | Dashboard criado no Microsoft Power BI |
 | `.env.example` | Modelo para configuração das chaves de acesso |
 | `requirements.txt` | Dependências do projeto |
+
 
 ## Configuração Rápida
 
@@ -120,6 +122,60 @@ Este projeto não inclui chaves sensíveis. Para executar corretamente:
 
 
 ![image](https://github.com/user-attachments/assets/e0daa13c-ccb2-48a1-83c1-724305801882)
+
+---
+## Dashboard Analítico no Power BI
+
+O dashboard foi desenvolvido no Power BI a partir do arquivo `youtube_data.csv`. Ele apresenta uma visão analítica da performance dos vídeos da playlist, com foco em **alcance**, **engajamento** e **distribuição temporal**.
+
+### Resumo no topo do dashboard
+
+No topo da tela, são exibidos **indicadores-chave (KPI Cards)** para rápida visualização dos números gerais:
+
+-  **Total de Vídeos**
+-  **Total de Visualizações**
+-  **Total de Curtidas**
+-  **Total de Comentários**
+-  **Taxa Média de Engajamento**
+
+Esses cartões oferecem uma visão geral instantânea do volume e da qualidade do engajamento gerado pelos vídeos analisados.
+
+---
+
+### 🔹 Visuais incluídos:
+
+- **Top 10 Vídeos Mais Visualizados**  
+  Gráfico de barras empilhadas destacando os vídeos com maior número de visualizações.
+
+- **Top 10 Vídeos Mais Curtidos**  
+  Mostra os vídeos com maior volume de likes, permitindo identificar o conteúdo mais apreciado pelo público.
+
+- **Top 10 Vídeos com Maior Taxa de Engajamento**  
+  Baseado na métrica `(likes + comentários) ÷ views`, esse gráfico evidencia os vídeos que geram mais interação proporcional ao seu alcance.
+
+- **Evolução Temporal das Publicações**  
+  Gráfico de linha mostrando a quantidade de vídeos publicados ao longo do tempo, útil para entender a frequência e distribuição das postagens.
+
+- **Tabela de Detalhamento**  
+  Tabela interativa com informações completas por vídeo:
+  - Ranking por views
+  - Título
+  - Número de visualizações
+  - Curtidas
+  - Comentários
+  - Link clicável para o vídeo
+
+---
+
+### Filtros disponíveis:
+
+- Segmentações por **Ano** e **Mês de publicação**, possibilitando análises sazonais
+- Slicer por **faixa de ranking (Top 10, Top 11–50, etc.)** para refinar as análises por performance
+
+---
+
+![image](https://github.com/user-attachments/assets/10ccb473-452a-4a8a-ae3e-e0629095178a)
+
 
 
 
