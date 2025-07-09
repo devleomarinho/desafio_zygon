@@ -1,6 +1,6 @@
-   # Desafio Técnico Zygon Digital - Analista de Dados 
+   # Desafio Técnico Zygon Digital - Vaga de Analista de Dados 
 
-Este projeto consiste em um script escrito em Python que coleta dados da playlist do YouTube fornecida utilizando a YouTube Data API v3, exporta para um arquivo CSV e também faz a persistência em uma tabela no BigQuery. Todo o processo de coleta, tratamento e exportação está em um único arquivo Python conforme solicitado. Por fim, desenvolvi um dashboard interativo no Microsoft Power BI para fazer uma análise dos vídeos, a partir do arquivo CSV gerado na extração.
+Este projeto consiste na solução do desafio técnico proposto para a vaga de Analista de Dados na Zygon Digital. O repositório contém um script escrito em Python que coleta dados da playlist do YouTube fornecida utilizando a YouTube Data API v3, exporta para um arquivo CSV e também faz a persistência em uma tabela no BigQuery. Todo o processo de coleta, tratamento e exportação está em um único arquivo Python conforme solicitado. Por fim, foi desenvolvido um dashboard interativo no Microsoft Power BI para fazer a análise da playlist, a partir do arquivo CSV gerado na extração.
 
 ## Arquivos principais
 
