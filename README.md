@@ -5,7 +5,7 @@ Este projeto coleta dados da playlist do YouTube fornecida, utilizando a YouTube
 ## Funcionalidades
 
 - Coleta dados dos vídeos da playlist do YouTube
-- Extrai todas as informações obrigatórias: ID, título, descrição, data de publicação, likes, views, comentários e thumbnail
+- Extrai todas as informações necessárias: ID, título, descrição, data de publicação, likes, views, comentários e thumbnail
 - Trata os dados (remove duplicatas, ordena, valida, define tipos das colunas)
 - Exporta os dados para arquivo CSV
 - Carrega os dados no BigQuery
@@ -107,10 +107,22 @@ Este projeto não inclui chaves sensíveis. Para executar corretamente:
     - Para que o upload funcione, a conta de serviço usada no script precisa ter permissão de **Editor** no dataset, neste caso o `yt_playlist_collector`.
 
 
-## Exemplo de Saída
+## Exemplo de Execução do Script
 
 ![image](https://github.com/user-attachments/assets/561d197d-0edb-4339-a7f9-6910c4bb88f0)
 ![image](https://github.com/user-attachments/assets/82246ea6-ec9d-406b-851d-ca4ce31c2c2a)
+
+## Visualização do arquivo CSV gerado
+![image](https://github.com/user-attachments/assets/3c3924d3-2b9b-4f8b-b86e-889d8fb029f5)
+
+## Visualização do esquema e tabela no BigQuery
+![image](https://github.com/user-attachments/assets/dca030f4-b25e-4737-aa19-7788c95b257b)
+
+
+![image](https://github.com/user-attachments/assets/e0daa13c-ccb2-48a1-83c1-724305801882)
+
+
+
 
 
 
