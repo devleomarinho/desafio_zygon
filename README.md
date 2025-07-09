@@ -4,7 +4,7 @@ Este projeto coleta dados da playlist do YouTube fornecida, utilizando a YouTube
 
 ## Funcionalidades
 
-- Coleta dados dos vídeos da playlist do YouTube
+- Coleta dados dos vídeos da playlist do YouTube fornecida
 - Extrai todas as informações necessárias: ID, título, descrição, data de publicação, likes, views, comentários e thumbnail
 - Trata os dados (remove duplicatas, ordena, valida, define tipos das colunas)
 - Exporta os dados para arquivo CSV
@@ -71,7 +71,7 @@ python yt_data.py
 ```
 
 O script executará automaticamente:
-1. **Coleta**: Busca vídeos da playlist
+1. **Coleta**: Busca vídeos da playlist fornecida: https://www.youtube.com/playlist?list=PLMC9KNkIncKtPzgY-5rmhvj7fax8fdxoj
 2. **Tratamento**: Remove duplicatas, ordena por views, valida dados, define tipos das colunas
 3. **Exportação**: Salva em CSV com todas as informações obrigatórias
 
