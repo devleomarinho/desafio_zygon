@@ -167,9 +167,14 @@ class YouTubeDataCollector:
         title = snippet.get('title', '').strip()
         description = snippet.get('description', '').strip()
         
-        # Limitar descrição a 500 caracteres para o CSV
-        if len(description) > 500:
-            description = description[:500] + "..."
+        # LIMPEZA COMPLETA DA DESCRIÇÃO
+        description = description.replace('\n', ' ').replace('\r', ' ')
+        description = re.sub(r'\s+', ' ', description) # Remove múltiplos espaços
+        description = description.replace('"', '""') 
+
+        # Limitar descrição a 300 caracteres para o CSV
+        if len(description) > 300:
+            description = description[:300] + "..."
         
         return {
             'video_id': video_item['id'],
