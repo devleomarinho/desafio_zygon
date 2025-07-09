@@ -1,14 +1,6 @@
    # Desafio Técnico Zygon Digital - Analista de Dados 
 
-Este projeto coleta dados da playlist do YouTube fornecida, utilizando a YouTube Data API v3, exporta para um arquivo CSV e também faz a persistência em uma tabela no BigQuery. Todo o processo de coleta, tratamento e exportação está em um único arquivo Python conforme solicitado.
-
-## Funcionalidades
-
-- Coleta dados dos vídeos da playlist do YouTube fornecida
-- Extrai todas as informações necessárias: ID, título, descrição, data de publicação, likes, views, comentários e thumbnail
-- Trata os dados (remove duplicatas, ordena, valida, define tipos das colunas)
-- Exporta os dados para arquivo CSV
-- Carrega os dados no BigQuery
+Este projeto consiste em um script escrito em Python que coleta dados da playlist do YouTube fornecida utilizando a YouTube Data API v3, exporta para um arquivo CSV e também faz a persistência em uma tabela no BigQuery. Todo o processo de coleta, tratamento e exportação está em um único arquivo Python conforme solicitado. Por fim, desenvolvi um dashboard interativo no Microsoft Power BI para fazer uma análise dos vídeos, a partir do arquivo CSV gerado na extração.
 
 ## Arquivos principais
 
@@ -20,7 +12,14 @@ Este projeto coleta dados da playlist do YouTube fornecida, utilizando a YouTube
 | `.env.example` | Modelo para configuração das chaves de acesso |
 | `requirements.txt` | Dependências do projeto |
 
+## Funcionalidades do Script
 
+- Coleta dados dos vídeos da playlist do YouTube fornecida
+- Extrai todas as informações necessárias: ID, título, descrição, data de publicação, likes, views, comentários e thumbnail
+- Trata os dados (remove duplicatas, ordena, valida, define tipos das colunas)
+- Exporta os dados para arquivo CSV
+- Carrega os dados no BigQuery
+  
 ## Configuração Rápida
 
 ### 1. Obter API Key do YouTube Data API
